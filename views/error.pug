@@ -1,6 +1,10 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  div(style="color: #fff;")
+    h1 Fixing things up...
+    p Oh no, I broke something! You caught us at a bad time! Try refreshing, or check it out on #[a(href="https://news.ycombinator.com/item?id=24135032" style="font-weight: bold; color: #fff;") Hacker News]
+  #hide(style="display: none;")
+    h1= message
+    h2= error.status
+    pre #{error.stack}
