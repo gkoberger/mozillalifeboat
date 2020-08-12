@@ -1,12 +1,15 @@
 extends layout
 
 block content
+  #shore
+    != svg('public/images/shore.svg', 'shore')
+
   #parent
     #logo-p
       #lifeboat Lifeboat
       != svg('public/images/ls.svg', 'ls')
       #logo-shadow
-        .logo.l1 #[span M]
+        .logo.l1 #[span m]
         .logo.l2 #[span o]
         .logo.l3 #[span z]
         .logo.l4 #[span :]
@@ -14,7 +17,7 @@ block content
         .logo.l6 #[span /]
         .logo.l7 #[span a]
       #logo-drop
-        .logo.l1 #[span M]
+        .logo.l1 #[span m]
         .logo.l2 #[span o]
         .logo.l3 #[span z]
         .logo.l4 #[span :]
@@ -22,7 +25,7 @@ block content
         .logo.l6 #[span /]
         .logo.l7 #[span a]
       #logo
-        .logo.l1 #[span M]
+        .logo.l1 #[span m]
         .logo.l2 #[span o]
         .logo.l3 #[span z]
         .logo.l4 #[span :]

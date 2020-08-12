@@ -1,5 +1,7 @@
 @import 'nib';
 
+$speed = 1.4s
+
 *, *:before, *:after
   box-sizing border-box
 
@@ -23,7 +25,6 @@ a
     left: 80px;
     display none
 
-  $speed = 1.4s
   #sea
     width 200px
     height 300px
@@ -206,3 +207,38 @@ a
     margin 0
   p
     color rgba(#fff, 0.8)
+
+#shore
+  position: absolute;
+  top -2px
+  right -2px
+  $speed = 7s
+  #shore-brown
+    animation shore-brown $speed ease-in-out infinite
+    @keyframes shore-brown
+      0%
+        transform translate(3px, -3px)
+      50%
+        transform translate(32px, -32px)
+      100%
+        transform translate(3px, -3px)
+  #shore-white
+    animation shore-white $speed ease-in-out infinite
+    @keyframes shore-white
+      0%
+        transform translate(0px, -0px)
+      60%
+        transform translate(25px, -25px)
+      70%
+        transform translate(25px, -25px)
+      100%
+        transform translate(0px, -0px)
+  #shore-blue
+    animation shore-blue $speed ease-in-out infinite
+    @keyframes shore-blue
+      0%
+        transform translateY(0px)
+      50%
+        transform translate(15px, -15px)
+      100%
+        transform translateY(0px)

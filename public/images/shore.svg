@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="308px" height="207px" viewBox="0 0 308 207" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>shore</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="81.1111111%" y1="11.0726644%" x2="21.1371528%" y2="88.9273356%" id="linearGradient-1">
+            <stop stop-color="#DEB273" offset="0%"></stop>
+            <stop stop-color="#F1C789" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="shore" transform="translate(0.000000, 0.500000)">
+            <path d="M194,1.1199953e-14 L0.5,0 C1.27122155,27.7535443 23.2712216,54.6549332 66.5,80.7041667 C103.5,103 190.329414,86.9948013 253,131.5 C276,147.833333 294.166667,172.666667 307.5,206 L307.5,0 L194,1.1199953e-14 Z" id="blue" fill="#67B2D0"></path>
+            <path d="M194,1.1199953e-14 L0.5,0 C1.27122155,27.7535443 23.2712216,54.6549332 66.5,80.7041667 C103.5,103 190.329414,86.9948013 253,131.5 C276,147.833333 294.166667,172.666667 307.5,206 L307.5,0 L194,1.1199953e-14 Z" id="white" fill="#FFFFFF"></path>
+            <path d="M194,1.1199953e-14 L0.5,0 C1.27122155,27.7535443 23.2712216,54.6549332 66.5,80.7041667 C103.5,103 190.329414,86.9948013 253,131.5 C276,147.833333 294.166667,172.666667 307.5,206 L307.5,0 L194,1.1199953e-14 Z" id="brown" fill="#F1C789"></path>
+            <ellipse id="hole" fill="url(#linearGradient-1)" cx="277" cy="27.5" rx="17" ry="15"></ellipse>
+        </g>
+    </g>
+</svg>
