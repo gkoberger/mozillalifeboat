@@ -54,6 +54,8 @@ const svg = function (src, _prefix) {
   file = file.replace(/url\(#/g, `url(#${prefix}-`);
 
   file = file.replace(/<title>(.*)<\/title>/g, '');
+  file = file.replace(/<desc>(.*)<\/desc>/g, '');
+  file = file.replace(/<!--(.*?)-->/g, '');
 
   // Give it an ID
   if (_prefix) {
