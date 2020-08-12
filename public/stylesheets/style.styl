@@ -6,13 +6,10 @@
 body
   padding: 50px
   font: 14px "Open Sans", Helvetica, Arial, sans-serif
+  background #3999c0
 a
   color: #00B7FF
 
-#pg-index
-  background #3999c0
-  p
-    color #888
 #parent
   svg
     width 200px
@@ -132,29 +129,30 @@ a
   100%
     transform translateY(4px)
 
-#companies
-  max-width 1760px
-  margin auto
+#companies {
+  max-width: 1761px;
+  margin: auto;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-auto-rows: 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+}
+
 .company
-  text-align left
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 -5px 3px rgba(0,0,0,0.1) inset, 0 3px 3px rgba(0,0,0,0.2);
-  padding: 30px;
-  width: 400px;
-  margin 20px
-  display inline-block
-  h1
+  background #fff
+  border-radius 10px
+  box-shadow 0 -5px 3px rgba(0,0,0,0.1) inset, 0 3px 3px rgba(0,0,0,0.2)
+  padding 30px
+  h2
     margin 0
 
 .add-company
-  text-align left
   background #175a75
-  border-radius: 10px;
-  padding: 30px;
-  width: 400px;
-  margin 20px
-  display inline-block
+  border-radius 10px
+  padding 30px
   color #fff
   h1
     margin 0
+  p
+    color rgba(#fff, 0.8)
