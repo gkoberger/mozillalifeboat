@@ -8,7 +8,6 @@ block content
 
   #parent
     #logo-p
-      #lifeboat lifeboat
       #logo-shadow
         .logo.l1 #[span m]
         .logo.l2 #[span o]
@@ -33,7 +32,9 @@ block content
         .logo.l5 #[span /]
         .logo.l6 #[span /]
         .logo.l7 #[span a]
-    != svg('public/images/boat.svg', 'sea')
+      #lifeboat lifeboat
+    #sea-parent
+      != svg('public/images/boat.svg', 'sea')
 
   #companies
     .add-company
