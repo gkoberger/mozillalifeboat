@@ -9,8 +9,10 @@
   "dependencies": {
     "body-parser": "~1.15.2",
     "cookie-parser": "~1.4.3",
+    "csv-parser": "^2.3.3",
     "debug": "~2.6.9",
     "express": "~4.14.0",
+    "lodash": "^4.17.19",
     "mongoose": "^5.2.9",
     "morgan": "~1.9.1",
     "nib": "^1.1.2",

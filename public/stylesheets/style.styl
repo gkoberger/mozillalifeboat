@@ -7,7 +7,8 @@ $speed = 1.4s
 
 body
   padding: 50px
-  font: 14px "Open Sans", Helvetica, Arial, sans-serif
+  font: 17px 'Fira Sans', sans-serif;
+  font-weight 300
   background linear-gradient(-45deg, #257b9e, #5bb1d4)
 
 html, body
@@ -187,7 +188,56 @@ a
 	grid-template-columns: repeat(4, 1fr);
 	grid-auto-rows: 1fr;
   grid-column-gap: 30px;
-  grid-row-gap: 20px;
+  grid-row-gap: 30px;
+}
+
+@media(max-width: 1500px) {
+  #companies {
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media(max-width: 1200px) {
+  #companies {
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media(max-width: 800px) {
+  #companies {
+    max-width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media(max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+  #sea {
+    top: -80px;
+    left: 0;
+  }
+  #logo-p, #shore {
+    display none
+  }
+  #parent {
+    height: 280px;
+    width: auto;
+    margin-left: -55px;
+  }
+  #sea {
+    margin: auto;
+    position: relative;
+    display: block;
+  }
+  #companies {
+    display: block;
+  }
+  .company {
+    margin: 0 0 30px 0;
+  }
 }
 
 .company
@@ -195,23 +245,78 @@ a
   border-radius 10px
   box-shadow 0 -5px 3px rgba(0,0,0,0.1) inset, 0 3px 3px rgba(0,0,0,0.2)
   padding 30px
+  position relative
+  .c-logo
+    height 40px
+    margin-bottom 20px
+    img
+      height: 40px;
+      max-width: 100%;
   h2
     margin 0
+  .desc
+    color #333
+    line-height 1.5em
+  .same
+    color #666
+    font-size 15px
+    line-height 1.5em
+  h3
+    font-weight: 400;
+    font-size: 18px;
+  .contact
+    color: #888;
+    font-size: 12px;
+    strong
+      font-weight 400
+      color #333
+  .careers-pad
+    height 60px
+    width 100%
+  .careers-parent
+    position absolute
+    bottom 0px
+    width 100%
+    padding 30px
+    left 0
+  a.careers
+    background: #19a719;
+    display: block;
+    border-radius: 4px;
+    padding: 12px 0px 11px;
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    &:hover
+      background: #128612;
 
 .add-company
   background #175a75
   border-radius 10px
   padding 30px
   color #fff
-  h1
+  h2
     margin 0
+    font-weight 400
   p
     color rgba(#fff, 0.8)
+  a
+    background: #2d718c;
+    color: #fff;
+    padding: 7px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    margin-top: 9px;
+    display: inline-block;
+    &:hover
+      background-color #f66b29
 
 #shore
   position: absolute;
   top -2px
-  right -2px
+  right 0px
   $speed = 7s
   #shore-brown
     animation shore-brown $speed ease-in-out infinite

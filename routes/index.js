@@ -1,11 +1,34 @@
 const express = require('express');
 const router = express.Router();
 const fs = require('fs');
+const csv = require('csv-parser');
+const _ = require('lodash');
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  res.render('index', { title: 'Home', svg });
+  const data = [];
+  fs.createReadStream('./data.csv')
+    .pipe(csv())
+    .on('data', (row) => {
+      const r = {};
+      _.each(row, (v, k) => {
+        r[k.trim()] = v;
+      });
+      data.push(r);
+    })
+    .on('end', () => {
+      console.log('CSV file successfully processed');
+      res.render('index', { title: 'Home', svg, data, json: JSON.stringify, getImage, });
+    });
 });
+
+const getImage = (c) => {
+  try {
+    return c['Company Logo'].split('(')[1].split(')')[0];
+  } catch(e) {
+    return '';
+  }
+};
 
 const svg = function (src, _prefix) {
   if (!src.match(/\.svg$/)) throw new Error("Hey! You can't do that!");

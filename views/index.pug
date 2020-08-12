@@ -35,19 +35,24 @@ block content
     != svg('public/images/boat.svg', 'sea')
 
   #companies
-    for i in [1,2,3,4,5]
-      .company
-        h2 ReadMe
-        p A quick blurb about what this company does
-        h3 Why's it like Mozilla?
-        p A quick blurb about what this company does
-        ul
-          li
-            strong Alumni:
-            a(href="") Test
-        a(href="") View Open Jobs
+    for c in data
+      if c["Company Name"]
+        .company
+          .c-logo
+            if getImage(c)
+              img(src=getImage(c))
+            else
+              != c['Company Name']
+          h3 What #{c['Company Name']} does
+          p.desc!= c['Company Description']
+          h3 How #{c['Company Name']} is like Mozilla
+          p.desc!= c["Why It's Like Mozilla"]
+          p.contact Alumni contact is #[strong= c['Mozilla Alumni Name']]
+          .careers-pad
+            .careers-parent
+              a.careers(href=c['Careers Page URL']) View Open Jobs
 
     .add-company
-      h1 Add Your Company
+      h2 Add Your Company
       p Are you a Mozilla alumni looking to hire someone recently laid off?
       a(href="") Add your company
