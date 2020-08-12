@@ -11,40 +11,77 @@ a
   color: #00B7FF
 
 #parent
+  $speed = 1.4s
   svg
     width 200px
     height 300px
     transform rotate(-39deg)
   g, path
-    transition 1.4s ease-out
+    transition 1.4s ease-in-out
   #sea-Head
     transform translateY(2px) translateX(-5px) rotate(-22deg)
-  &.on
-    #sea-Shadow
-      transform translateX(-6px)
-    #sea-Shadow
-      transform translateX(-6px)
-    #sea-Boat
-      transform translateX(6px)
-    #sea-Top-Deck-Shadow
-      transform translateX(-3px)
-    #sea-Top-Deck-Inside
-      transform translateX(-3px)
-    #sea-Deck-Shadow-right
-      transform translateX(-8px)
-    #sea-Outside-left
-      transform translateX(-5px)
-    #sea-Deck-right
-      transform translateX(-10px)
-    #sea-Body
+
+  // This will cut down on CSS we have to write!
+  // Don't bother understainding it, just trust the process...
+  boat-root(selector)
+    #{selector}
+      animation selector $speed ease-in-out alternate infinite
+    @keyframes {selector}
+      from
+        transform translateX(0px)
+      to
+        {block}
+  boat(selector)
+    +boat-root(selector)
+      from
+        transform translateX(0px)
+      to
+        {block}
+
+  +boat(sea-Shadow)
+    transform translateX(-6px)
+
+  +boat(sea-Boat)
+    transform translateX(6px)
+
+  +boat(sea-Top-Deck-Shadow)
+    transform translateX(-3px)
+
+  +boat(sea-Top-Deck-Inside)
+    transform translateX(-3px)
+
+  +boat(sea-Top-Shadow-right)
+    transform translateX(-8px)
+
+  +boat(sea-Outside-left)
+    transform translateX(-5px)
+
+  +boat(sea-Deck-right)
+    transform translateX(-10px)
+
+  +boat-root(sea-Body)
+    from
+      transform translate(13px, 132px)
+    to
       transform translate(12px, 132px)
-    #sea-Head
+
+  +boat-root(sea-Head)
+    from
+      transform translateY(2px) translateX(-5px) rotate(-22deg)
+    to
       transform translateY(2px) translateX(0px) rotate(-22deg)
-    #sea-RP-Shadow-Body
-      transform translateY(-1px)
-    #sea-RP-Shadow-Tail
-      transform translateY(-1px) translateX(-7px)
-    #sea-Tail
+
+
+  +boat(sea-RP-Shadow-Body)
+    transform translateY(-1px)
+
+  +boat(sea-RP-Shadow-Tail)
+    transform translateY(-1px) translateX(-7px)
+
+  +boat-root(sea-Tail)
+    from
+      transform translate(35.990969px, 5.149352px)
+    to
       transform translate(31.990969px, 5.149352px)
 
 #logo-p
