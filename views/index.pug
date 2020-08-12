@@ -43,7 +43,10 @@ block content
       p A great place to find more people hiring and looking is the #[a(href="https://twitter.com/search?q=%23mozillalifeboat") #mozillalifeboat] hashtag on Twitter.
       h3 Add Your Company
       p Are you a Mozilla alumni looking to hire someone recently laid off?
-      a.chunky(href="https://www.facebook.com/groups/102874566502850/permalink/1878469872276635/") Add your company
+      a#add-your-company.chunky(href="https://www.facebook.com/groups/102874566502850/permalink/1878469872276635/") Add your company
+      #howto
+        strong How to add your company
+        p This is for Mozilla's alumni network to post jobs! If you're in the group, it includes the form to #[a(href='https://www.facebook.com/groups/102874566502850/permalink/1878469872276635/') submit a company]. If you're an alumni but you're not in the FB group, you can #[a(href="mailto:gkoberger@gmail.com") email me]. And if you're not an alumni, try reaching out to people in the list at the bottom of this page!
     for c in data
       if c["Company Name"]
         .company
