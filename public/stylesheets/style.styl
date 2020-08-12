@@ -7,7 +7,7 @@ $speed = 1.4s
 
 body
   padding: 50px
-  font: 17px 'Fira Sans', sans-serif;
+  font: 15px 'Fira Sans', sans-serif;
   font-weight 300
   background linear-gradient(-45deg, #257b9e, #5bb1d4)
 
@@ -30,6 +30,13 @@ a
     width 200px
     height 300px
     transform rotate(-39deg)
+    animation boat 8.3s ease-out 0s alternate infinite
+    @keyframes boat
+      from
+        transform rotate(-45deg)
+      to
+        transform rotate(-30deg)
+
   #sea-Head
     transform translateY(2px) translateX(-5px) rotate(-22deg)
 
@@ -128,13 +135,13 @@ a
     &.l6
       transform rotate(-2deg)
 #parent
-  width 620px
+  width 580px
   position relative
-  margin 50px auto
+  margin 80px auto
 
 #sea
   position absolute
-  left 390px
+  left 350px
   top -90px
 
 #logo-p
@@ -208,6 +215,11 @@ a
   }
 }
 @media(max-width: 800px) {
+  #shore {
+    display none
+  }
+}
+@media(max-width: 800px) {
   #companies {
     max-width: 100%;
     grid-template-columns: repeat(1, 1fr);
@@ -238,7 +250,7 @@ a
   #companies {
     display: block;
   }
-  .company {
+  .company, .add-company {
     margin: 0 0 30px 0;
   }
 }
@@ -318,7 +330,7 @@ a
 
 #shore
   position: absolute;
-  top -2px
+  top 23px
   right 0px
   $speed = 7s
   #shore-brown
@@ -350,3 +362,14 @@ a
         transform translate(15px, -15px)
       100%
         transform translateY(0px)
+
+#intro
+  top: 0;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  color: #fff;
+  background: #175a75;
+  width: 100%;
+  z-index: 1000;
+  padding: 14px 0;

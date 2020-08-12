@@ -1,6 +1,7 @@
 extends layout
 
 block content
+  #intro Connecting Mozilla Alumni who are hiring with Mozillans who are looking
   #shore
     != svg('public/images/shore.svg', 'shore')
 
@@ -35,6 +36,12 @@ block content
     != svg('public/images/boat.svg', 'sea')
 
   #companies
+    .add-company
+      h3 #MozillaLifeboat
+      p Mozilla recently laid off 250 employees. Mozilla Lifeboat helps connect Mozillians looking for jobs with people in the Mozilla Alumni network who are hiring.
+      h3 Add Your Company
+      p Are you a Mozilla alumni looking to hire someone recently laid off?
+      a(href="") Add your company
     for c in data
       if c["Company Name"]
         .company
@@ -52,7 +59,3 @@ block content
             .careers-parent
               a.careers(href=c['Careers Page URL']) View Open Jobs
 
-    .add-company
-      h2 Add Your Company
-      p Are you a Mozilla alumni looking to hire someone recently laid off?
-      a(href="") Add your company
