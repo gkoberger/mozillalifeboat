@@ -29,3 +29,21 @@ block content
         .logo.l6 #[span /]
         .logo.l7 #[span a]
     != svg('public/images/boat.svg', 'sea')
+
+  #companies
+    for i in [1,2,3,4,5]
+      .company
+        h2 ReadMe
+        p A quick blurb about what this company does
+        h3 Why's it like Mozilla?
+        p A quick blurb about what this company does
+        ul
+          li
+            strong Alumni:
+            a(href="") Test
+        a(href="") View Open Jobs
+
+    .add-company
+      h1 Add Your Company
+      p Are you a Mozilla alumni looking to hire someone recently laid off?
+      a(href="") Add your company
