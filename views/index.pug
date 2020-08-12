@@ -63,7 +63,15 @@ block content
           //p.desc!= c["Why It's Like Mozilla"]
           h3 What #{c['Company Name']} is hiring for
           p.desc!= c["Types of Jobs"]
+
           p.contact Alumni contact is #[a(href=getLink(c))= c['Mozilla Alumni Name']]
+
+          if c['Alumni-founded?'] || c['Remote Friendly?']
+            div.flags
+              if c['Alumni-founded?']
+                .alumni Alumni-founded
+              if c['Remote Friendly?']
+                .remote Remote friendly
           .careers-pad
             .careers-parent
               a.careers(href=c['Careers Page URL']) View Open Jobs
