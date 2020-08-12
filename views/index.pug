@@ -52,9 +52,11 @@ block content
               != c['Company Name']
           h3 What #{c['Company Name']} does
           p.desc!= c['Company Description']
-          h3 How #{c['Company Name']} is like Mozilla
-          p.desc!= c["Why It's Like Mozilla"]
-          p.contact Alumni contact is #[strong= c['Mozilla Alumni Name']]
+          //h3 How #{c['Company Name']} is like Mozilla
+          //p.desc!= c["Why It's Like Mozilla"]
+          h3 What #{c['Company Name']} is hiring for
+          p.desc!= c["Types of Jobs"]
+          p.contact Alumni contact is #[a(href=c['Mozilla Alumni Contact'])= c['Mozilla Alumni Name']]
           .careers-pad
             .careers-parent
               a.careers(href=c['Careers Page URL']) View Open Jobs
