@@ -52,6 +52,8 @@ const svg = function (src, _prefix) {
   file = file.replace(/xlink:href="#/g, `xlink:href="#${prefix}-`);
   file = file.replace(/url\(#/g, `url(#${prefix}-`);
 
+  file = file.replace(/<title>(.*)<\/title>/g, '');
+
   // Give it an ID
   if (_prefix) {
     file = file.replace(/<svg/, `<svg id="${_prefix}"`);
