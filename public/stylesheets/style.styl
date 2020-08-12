@@ -11,13 +11,19 @@ a
   color: #00B7FF
 
 #parent
+  #ls
+    width 100px
+    height 100px
+    position: absolute;
+    top: 105px;
+    left: 80px;
+    display none
+
   $speed = 1.4s
-  svg
+  #sea
     width 200px
     height 300px
     transform rotate(-39deg)
-  g, path
-    transition 1.4s ease-in-out
   #sea-Head
     transform translateY(2px) translateX(-5px) rotate(-22deg)
 
@@ -55,6 +61,9 @@ a
 
   +boat(sea-Outside-left)
     transform translateX(-5px)
+
+  +boat(sea-Deck-Shadow-right)
+    transform translateX(-8px)
 
   +boat(sea-Deck-right)
     transform translateX(-10px)
