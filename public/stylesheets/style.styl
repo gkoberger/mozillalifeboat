@@ -10,5 +10,124 @@ a
   color: #00B7FF
 
 #pg-index
+  background #3999c0
   p
     color #888
+#parent
+  svg
+    width 200px
+    height 300px
+    transform rotate(-39deg)
+  g, path
+    transition 1.4s ease-out
+  #sea-Head
+    transform translateY(2px) translateX(-5px) rotate(-22deg)
+  &.on
+    #sea-Shadow
+      transform translateX(-6px)
+    #sea-Shadow
+      transform translateX(-6px)
+    #sea-Boat
+      transform translateX(6px)
+    #sea-Top-Deck-Shadow
+      transform translateX(-3px)
+    #sea-Top-Deck-Inside
+      transform translateX(-3px)
+    #sea-Deck-Shadow-right
+      transform translateX(-8px)
+    #sea-Outside-left
+      transform translateX(-5px)
+    #sea-Deck-right
+      transform translateX(-10px)
+    #sea-Body
+      transform translate(12px, 132px)
+    #sea-Head
+      transform translateY(2px) translateX(0px) rotate(-22deg)
+    #sea-RP-Shadow-Body
+      transform translateY(-1px)
+    #sea-RP-Shadow-Tail
+      transform translateY(-1px) translateX(-7px)
+    #sea-Tail
+      transform translate(31.990969px, 5.149352px)
+
+#logo-p
+  position relative
+  height 80px
+#logo, #logo-shadow, #logo-drop
+  position absolute
+  .logo
+    display inline-block
+    color #fff
+    font-family 'Roboto Slab', serif
+    font-weight 900
+    font-size 70px
+    padding 0 6px
+    &.l1
+      transform rotate(2deg)
+    &.l2
+      transform rotate(1deg)
+    &.l3
+      transform rotate(-2deg) translateY(3px)
+    &.l4
+      transform rotate(2deg)
+    &.l5
+      transform rotate(0deg) translateY(-3px)
+    &.l6
+      transform rotate(2deg)
+    &.l6
+      transform rotate(-2deg)
+#parent
+  width 620px
+  position relative
+  margin 50px auto
+
+#sea
+  position absolute
+  left 390px
+  top -90px
+
+#logo-p
+  position relative
+  #lifeboat
+    position absolute
+    left 200px
+    color #175a75
+    font-size 37px
+    top 88px
+
+#logo
+  .logo
+    span
+      position relative
+      display inline-block
+    &.l1 span
+      animation letter 2.5s ease-out infinite
+    &.l2 span
+      animation letter 2.3s ease-out -0.3s infinite
+    &.l3 span
+      animation letter 2.4s ease-out -0.2s infinite
+    &.l4 span
+      animation letter 2.3s ease-out -0.4s infinite
+    &.l5 span
+      animation letter 2.5s ease-out -0.4s infinite
+    &.l6 span
+      animation letter 2.3s ease-out 0s infinite
+    &.l6 span
+      animation letter 2.5s ease-out -0.4s infinite
+#logo-shadow
+  transform translate(-5px, 8px)
+  .logo
+    color #338baf
+
+#logo-drop
+  transform translate(-1px, 4px)
+  .logo
+    color #dccec8
+
+@keyframes letter
+  0%
+    transform translateY(4px)
+  50%
+    transform translateY(0px)
+  100%
+    transform translateY(4px)

@@ -1,5 +1,31 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  #parent
+    #logo-p
+      #lifeboat Lifeboat
+      #logo-shadow
+        .logo.l1 #[span M]
+        .logo.l2 #[span o]
+        .logo.l3 #[span z]
+        .logo.l4 #[span :]
+        .logo.l5 #[span /]
+        .logo.l6 #[span /]
+        .logo.l7 #[span a]
+      #logo-drop
+        .logo.l1 #[span M]
+        .logo.l2 #[span o]
+        .logo.l3 #[span z]
+        .logo.l4 #[span :]
+        .logo.l5 #[span /]
+        .logo.l6 #[span /]
+        .logo.l7 #[span a]
+      #logo
+        .logo.l1 #[span M]
+        .logo.l2 #[span o]
+        .logo.l3 #[span z]
+        .logo.l4 #[span :]
+        .logo.l5 #[span /]
+        .logo.l6 #[span /]
+        .logo.l7 #[span a]
+    != svg('public/images/boat.svg', 'sea')
