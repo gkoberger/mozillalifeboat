@@ -18,7 +18,7 @@ router.get('/', (req, res, next) => {
     })
     .on('end', () => {
       console.log('CSV file successfully processed');
-      res.render('index', { title: 'Home', svg, data, json: JSON.stringify, getImage, });
+      res.render('index', { title: 'Home', svg, data, json: JSON.stringify, getImage, getLink });
     });
 });
 
@@ -28,6 +28,16 @@ const getImage = (c) => {
   } catch(e) {
     return false;
   }
+};
+const getLink = (c) => {
+  let contact =  c['Mozilla Alumni Contact'];
+  if (contact.indexOf('@') >= 1) {
+    return `mailto:${contact}`;
+  }
+  if (contact.indexOf('@') == 0) {
+    return `https://twitter.com/${contact}`;
+  }
+  return contact;
 };
 
 const svg = function (src, _prefix) {
