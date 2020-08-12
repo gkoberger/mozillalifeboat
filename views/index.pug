@@ -8,7 +8,6 @@ block content
   #parent
     #logo-p
       #lifeboat lifeboat
-      != svg('public/images/ls.svg', 'ls')
       #logo-shadow
         .logo.l1 #[span m]
         .logo.l2 #[span o]
@@ -64,6 +63,7 @@ block content
               a.careers(href=c['Careers Page URL']) View Open Jobs
 
   #looking
+    != svg('public/images/ls.svg', 'ls')
     h2 People Looking For Work
     p This is a list of awesome ex-Mozillians looking for their next home!
     a#add(href="https://airtable.com/shrba7HVTLgAgspTb") #[strong Laid off?] Add Yourself
