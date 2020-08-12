@@ -6,7 +6,7 @@ const _ = require('lodash');
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  const data = [];
+  let data = [];
   fs.createReadStream('./data.csv')
     .pipe(csv())
     .on('data', (row) => {
@@ -14,10 +14,11 @@ router.get('/', (req, res, next) => {
       _.each(row, (v, k) => {
         r[k.trim()] = v;
       });
+      r.sort = parseInt(r['Promoted'] || 0, 10);
       data.push(r);
     })
     .on('end', () => {
-      console.log('CSV file successfully processed');
+      data = _.sortBy(data, 'sort').reverse();
       res.render('index', { title: 'Home', svg, data, json: JSON.stringify, getImage, getLink });
     });
 });
