@@ -7,7 +7,7 @@ block content
 
   #parent
     #logo-p
-      #lifeboat Lifeboat
+      #lifeboat lifeboat
       != svg('public/images/ls.svg', 'ls')
       #logo-shadow
         .logo.l1 #[span m]
@@ -49,7 +49,7 @@ block content
             if getImage(c)
               img(src=getImage(c))
             else
-              != c['Company Name']
+              h2!= c['Company Name']
           h3 What #{c['Company Name']} does
           p.desc!= c['Company Description']
           //h3 How #{c['Company Name']} is like Mozilla

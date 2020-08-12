@@ -26,7 +26,7 @@ const getImage = (c) => {
   try {
     return c['Company Logo'].split('(')[1].split(')')[0];
   } catch(e) {
-    return '';
+    return false;
   }
 };
 
