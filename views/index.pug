@@ -65,7 +65,7 @@ block content
           h3 What #{c['Company Name']} is hiring for
           p.desc!= c["Types of Jobs"]
 
-          p.contact Alumni contact is #[a(href=getLink(c))= c['Mozilla Alumni Name']]
+          p.contact Mozillian contact is #[a(href=getLink(c))= c['Mozilla Alumni Name']]
 
           if c['Alumni-founded?'] || c['Remote Friendly?']
             div.flags
