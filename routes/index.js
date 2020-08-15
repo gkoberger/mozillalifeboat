@@ -14,8 +14,10 @@ router.get('/', (req, res, next) => {
       _.each(row, (v, k) => {
         r[k.trim()] = v;
       });
-      r.sort = parseInt(r['Promoted'] || 0, 10);
-      data.push(r);
+      if (r.Ranking[0] !== 'X' && r['Do you have a Mozilla alumni at your company?'] == 'checked') {
+        r.sort = parseInt(r['Ranking'].split('.')[0], 10) || 0;
+        data.push(r);
+      }
     })
     .on('end', () => {
       data = _.sortBy(data, 'sort').reverse();
